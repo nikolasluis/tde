@@ -1,0 +1,106 @@
+body{
+    background-color: black;
+}
+
+td{
+    color:white;
+    text-align:center;
+    width:25%;
+}
+
+.titulo{
+    font-family: 'Games', sans-serif;
+    font-size: 70px;
+    color:white;
+    text-align:center;
+}
+
+img{
+    height: 340px;
+    width: 250px;
+    border-radius: 10px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+
+/* --------------------- DROPDOWN MENU-----------------------------*/
+.dropbtn {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: none;
+    font-family: 'Games', sans-serif;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color:white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  
+.dropdown-content a:hover {background-color:darkgray;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: black;}
+
+/* ---------------------------------------------------------------------*/
+
+/* --------------------- BOTOES ESPECIAIS-----------------------------*/
+.botao{
+    font-family: 'Games', sans-serif;
+    border-radius: 10px;
+    font-size:25px;
+    text-align:center;
+    width: auto;
+    height: 30px;
+    background-color:black;
+    color:white;
+    border:none;
+    transition:all 5s;
+
+}
+
+.botao span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.botao span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.botao:hover span {
+   padding-right: 25px;
+}
+  
+.botao:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* ---------------------------------------------------------------------*/
