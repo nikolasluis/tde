@@ -2,10 +2,10 @@
 
     <head>
         <meta charset="utf-8">
-        <script>src="javascript/fc.js"; type="text/javascipt"</script>
         <link rel="stylesheet" href="../css/estilosReview.css">
         <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="../javascript/fc.js"></script>
     </head>
 
     <body>
@@ -21,29 +21,29 @@
             <tr>
                 <td>Nome</td>
                 <td colspan="3">
-                    <input type="text" placeholder="Nome"/>
+                    <input type="text" placeholder="Nome" id="nome"/>
                 </td>
             </tr>
 
             <tr>
                 <td>E-mail</td>
                 <td colspan="3">
-                    <input type="text" placeholder="E-Mail"/>
+                    <input type="text" placeholder="E-Mail" id="email"/>
                 </td>
             </tr>
 
             <tr>
                 <td>Game</td>
                 <td colspan="3">
-                    <select>
-                        <option>Battlefield 2042</option>
-                        <option>Valorant</option>
-                        <option>Call of Duty: Cold War</option>
-                        <option>Cyberpunk 2077</option>
-                        <option>Deathloop</option>
-                        <option>Far Cry 6</option>
-                        <option>Guardians of the Galaxy</option>
-                        <option>Halo Infinite</option>
+                    <select id="game">
+                        <option value = "1">Battlefield 2042</option>
+                        <option value = "2">Valorant</option>
+                        <option value = "3">Call of Duty: Cold War</option>
+                        <option value = "4">Cyberpunk 2077</option>
+                        <option value = "5">Deathloop</option>
+                        <option value = "6">Far Cry 6</option>
+                        <option value = "7">Guardians of the Galaxy</option>
+                        <option value = "8">Halo Infinite</option>
                     </select>
                 </td>
             </tr>
@@ -51,16 +51,16 @@
             <tr>
                 <td>Plataforma</td>
                 <td colspan="4">
-                    <select>
-                        <option>Xbox One Slim</option>
-                        <option>Xbox One Pro</option>
-                        <option>Xbox Series S</option>
-                        <option>Xbox Series X</option>
-                        <option>Playstation 4 Slim</option>
-                        <option>Playstation 4 Pro</option>
-                        <option>Playstation 5</option>
-                        <option>Nintendo Switch</option>
-                        <option>PC</option>
+                    <select id="plataforma">
+                        <option value = "1">Xbox One Slim</option>
+                        <option value = "2">Xbox One Pro</option>
+                        <option value = "3">Xbox Series S</option>
+                        <option value = "4">Xbox Series X</option>
+                        <option value = "5">Playstation 4 Slim</option>
+                        <option value = "6">Playstation 4 Pro</option>
+                        <option value = "7">Playstation 5</option>
+                        <option value = "8">Nintendo Switch</option>
+                        <option value = "9">PC</option>
                     </select>
                 </td>
             </tr>
@@ -68,17 +68,17 @@
             <tr>
                 <td>Nota</td>
                 <td colspan="4">
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
+                    <select id="nota">
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
                     </select>
                 </td>
             </tr>
@@ -86,12 +86,12 @@
             <tr>
                 <td>Escreva sua review</td>
                 <td colspan="4">
-                    <textarea></textarea>
+                    <textarea id="review"></textarea>
                 </td>
             </tr>
 
             <tr>
-                <td colspan="4"><button type="submit" class="botao"> <span>Enviar Review</span></button></td>
+                <td colspan="4"><button class="botao" onclick="enviar()"> <span>Enviar Review</span></button></td>
             </tr>
             
         </table>
