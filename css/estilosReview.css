@@ -1,0 +1,29 @@
+@import "estilosEntrar.css";
+
+select{
+    width: 500px;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border-color: white;
+    font-size: 20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+textarea{
+    width:500px;
+    height: 200px;
+    margin-top:20px;
+    margin-bottom:20px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color:darkgray;
+    position: relative;
+    resize:none;
+    font-size:15px;
+    border-radius: 10px;
+    border-color: white;
+}
