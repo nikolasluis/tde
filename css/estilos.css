@@ -6,6 +6,7 @@ td{
     color:white;
     text-align:center;
     width:25%;
+    height:auto;
 }
 
 .titulo{
@@ -30,10 +31,6 @@ p{
     text-align:center;
     margin-top:10px;
     margin-bottom:50px;
-}
-
-.e td{
-    width: 10%;
 }
 
 
