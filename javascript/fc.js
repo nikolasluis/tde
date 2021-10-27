@@ -1,4 +1,3 @@
-
 var games = [[],[],[],[],[],[],[],[]];
 var grades = [0,0,0,0,0,0,0,0];
 
@@ -44,3 +43,6 @@ function enviar(){
     notas(game);
 };
 
+function showNotaValorant(){
+    document.getElementById("nota_jogo").innerHTML = "<div> Nota: " + grades[1] + "</div>";
+}

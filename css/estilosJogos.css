@@ -1,5 +1,8 @@
-.notas p{
-    border-radius: 10px;
-    border-color: white;
-    color:white;
+@import "estilos.css";
+
+.nota{
+    color: white;
+    text-align: center;
+    font-size:30px;
+    font-family:'Games', sans-serif;;
 }

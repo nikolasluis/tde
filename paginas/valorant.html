@@ -2,13 +2,13 @@
 
     <head>
         <meta charset="utf-8">
-        <script>src="javascript/fc.js"; type="text/javascipt"</script>
-        <link rel="stylesheet" href="../css/estilos.css">
+        <script type="text/javascript" src="../javascript/fc.js"></script>
+        <link rel="stylesheet" href="../css/estilosJogos.css">
         <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body>
+    <body onload="showNotaValorant()">
 
         <table border=1 width="100%">
         
@@ -24,7 +24,7 @@
                 </td>
                 <td colspan="3">
                     <p>Valorant</p>
-                    <p class="notas">Nota: X.X</p>
+                    <div id="nota_jogo" class="nota"></div>
                 </td>
             </tr>
 
