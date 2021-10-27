@@ -1,4 +1,4 @@
-@import "estilosEntrar.css";
+@import "estilos.css";
 
 select{
     width: 500px;
@@ -26,4 +26,22 @@ textarea{
     font-size:15px;
     border-radius: 10px;
     border-color: white;
+}
+
+input{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 500px;
+    height: 30px;
+    background-color:black;
+    text-align: left;
+    border-radius: 10px;
+    border: 2px solid white;
+    color:white;
+    font-size:20px;
+}
+
+button{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
