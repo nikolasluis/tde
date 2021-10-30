@@ -60,14 +60,53 @@ function tabelita(){
  
      //Inclui uma linha no elemento tabela <tr></tr>
      //informei -1 para criar a linha no final da tabela
-     var linha = tabela.insertRow(-1);
- 
-     //Adiciona duas coluna na linha criada <td></td> <td></td>
-     var coluna1 = linha.insertCell(0);
-     var coluna2 = linha.insertCell(1);
- 
-     //Inclui o valor do campo do formulário em sua respectiva coluna
-     coluna1.innerHTML = gamesData[1][0];
-     coluna2.innerHTML = gamesData[1][5];
+
+     for(var i = 0; i<gamesData.length; i++){
+        if(gamesData[i][2]==2){
+            
+            var linha = tabela.insertRow(-1);
+            var coluna1 = linha.insertCell(0);
+            var coluna2 = linha.insertCell(1);
+            var coluna3 = linha.insertCell(2);
+            var coluna4 = linha.insertCell(3);
+
+            coluna1.innerHTML = gamesData[i][0];
+            coluna2.innerHTML = plataformaConversion(gamesData[i][3]);
+            coluna3.innerHTML = gamesData[i][5];
+            coluna4.innerHTML = gamesData[i][4];
+
+        }
+    }
      
+}
+
+function plataformaConversion(plataforma){
+
+    if (plataforma==1){
+        return "Xbox One Slim";
+    }
+    if (plataforma==2){
+        return "Xbox One Pro";
+    }
+    if (plataforma==3){
+        return "Xbox Series S";
+    }
+    if (plataforma==4){
+        return "Xbos Series X";
+    }
+    if (plataforma==5){
+        return "Playstation 4 Slim";
+    }
+    if (plataforma==6){
+        return "Playstation 4 Pro";
+    }
+    if (plataforma==7){
+        return "Playstation 5";
+    }
+    if (plataforma==8){
+        return "Nintendo Switch";
+    }
+    if (plataforma==9){
+        return "PC";
+    }
 }
