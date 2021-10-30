@@ -1,20 +1,6 @@
-
-var games = [[],[],[],[],[],[],[],[]];
-var grades = [0,0,0,0,0,0,0,0];
-
-function notas(game){
-
-    var nota = 0;
-
-    for(var i in games[game-1]){
-        nota = nota + Number(games[game-1][i][4])
-    }
-
-    nota_final = nota/games[game-1].length;
-
-    grades.splice(game-1,1,nota_final);
-    console.log(grades);
-}
+storage = window.localStorage;
+var dadosDoStorageGames = JSON.parse(storage.getItem("data"))||"[]";
+var gamesData = dadosDoStorageGames;
 
 function enviar(){
 
@@ -32,18 +18,56 @@ function enviar(){
     aux.push(nota);
     var review= document.getElementById("review").value;
     aux.push(review);
-    
 
-    for(var i = 0; i < 8;i++){
-        if(game==i+1){
-            games[i].push(aux);
+    
+    if(!(gamesData instanceof Array)){
+    	gamesData = [gamesData]; 
+	}
+
+    gamesData.push(aux);
+
+    storage.setItem("data",JSON.stringify(gamesData));
+    
+    console.log(gamesData);
+}
+
+
+function notasValorant(){
+
+    var nota = 0;
+    var aux = 0;
+
+    for(var i = 0; i<gamesData.length; i++){
+        if(gamesData[i][2]==2){
+            nota = nota + Number(gamesData[i][4])
+            aux++;
         }
     }
-    
-    console.log(games);
-    notas(game);
-};
 
-function showNotaValorant(){
-    document.getElementById("nota_jogo").innerHTML = "<div> Nota: " + grades[1] + "</div>";
+    nota_final = nota/aux;
+
+    document.getElementById("nota_jogo").innerHTML = "<div> Nota: " + nota_final + "</div>";
+
+    tabelita();
+
+}
+
+function tabelita(){
+     //Recupera as informações do campo dos formulários
+
+     //Encontra o elemento tabela
+     var tabela = document.getElementById("revValorant");
+ 
+     //Inclui uma linha no elemento tabela <tr></tr>
+     //informei -1 para criar a linha no final da tabela
+     var linha = tabela.insertRow(-1);
+ 
+     //Adiciona duas coluna na linha criada <td></td> <td></td>
+     var coluna1 = linha.insertCell(0);
+     var coluna2 = linha.insertCell(1);
+ 
+     //Inclui o valor do campo do formulário em sua respectiva coluna
+     coluna1.innerHTML = gamesData[1][0];
+     coluna2.innerHTML = gamesData[1][5];
+     
 }
